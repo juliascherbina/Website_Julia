@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;800&family=Caudex&family=Orbitron:wght@700&display=swap');
 body {
-    background:linear-gradient(108.76deg, #343131 -1.39%, #1D1919 102.08% )
+    background:linear-gradient(108.76deg, #343131 -1.39%, #1D1919 102.08% );
+    font-family: 'Catamaran', sans-serif
 }
 body, html {
     height: 100vh;
@@ -9,6 +11,7 @@ body, html {
     grid-template-columns: 110px 1fr;
     grid-template-rows: 98px 1fr;
     height: 100%;
+    gap: 60px;
 }
 .content-sidebar {
     border-right: 1px solid #505050;
@@ -41,6 +44,11 @@ body, html {
 }
 .content-sidebar__list{
     list-style: none;
+    margin-bottom: 60px;
+    padding-left: 0px;
+}
+.content-sidebar__item {
+    margin-top: 63px;
 }
 .content-sidebar__fb {
     background-image: url(../images/Facebook.svg);
@@ -50,18 +58,81 @@ body, html {
 }
 .content-sidebar__tw {
     background-image: url(../images/download.png);
+    background-size: contain;
 }
 .content-sidebar__link{
     display: block;
     width: 30px;
     height: 30px;
+    margin: 0 auto;
     background-repeat: no-repeat;
+    background-position: center, center;
+}
+
+.content-main {
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 .content-header {
     grid-column:2/3 ;
     grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 70px;
 }
-.content-main {
-    grid-column: 2/3;
-    grid-row: 2/3;
+.content-header__logo {
+background-image: url(../images/love.webp);
+border: black;
+display: block;
+width: 102px;
+height: 31px;
+background-repeat: no-repeat;
+background-size: contain;
+}
+.content-header__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    
+}
+
+.content-header__item {
+    margin-left: 67px;
+}
+.content-header__link {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+.content-header__link::after{
+    content: '';
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    bottom: -14px;
+    opacity: 0;
+    transition: 0.2s;
+}
+.content-header__link.active {
+    font-weight: 800;
+    position: relative;
+}
+.content-header__link.active::after,
+.content-header__link:hover::after{
+    opacity: 1;
+}
+.content-header__link.wallet {
+    background-image: url(../images/wallet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 24px;
+    height: 24px;
+    
 }

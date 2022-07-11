@@ -41,11 +41,18 @@
                         <div class="swiper-body">
                             Slide 1
                         </div>
-                        
                         <div class="swiper-footer">text</div>
                     </div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">
+                        <div class="swiper-body">
+                            Slide 2
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-body">
+                            Slide 3
+                        </div>
+                    </div>
 
                 </div>
                 <div class="swiper-pagination"> </div>
@@ -63,8 +70,8 @@
                 el: ".swiper-pagination",
                 clickable: true,
                 renderBullet: function (index, className) {
-                    return ('<p class="' + className + '">' + ('#0'+(count[index]))+'<span>'+(art[index])+'</span>'+
-                         '<span>'+(price[index])+'</span>' + "</p>")
+                    return ('<p class="' + className + '">' + ('#0' + (count[index])) + '<span class="pagination-art">' + (art[index]) + '</span>' +
+                        '<span class="pagination-price">' + '<span>'+ (price[index]) + '</span>' + '</span>' + "</p>")
                 },
             },
         });

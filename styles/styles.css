@@ -11,7 +11,7 @@ body, html {
     grid-template-columns: 110px 1fr;
     grid-template-rows: 98px 1fr;
     height: 100%;
-    gap: 60px;
+    
 }
 .content-sidebar {
     border-right: 1px solid #505050;
@@ -80,6 +80,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding-right: 70px;
+    padding-left: 60px;
 }
 .content-header__logo {
 background-image: url(../images/love.webp);
@@ -135,4 +136,51 @@ background-size: contain;
     width: 24px;
     height: 24px;
     
+}
+.swiper {
+    height: calc(100vh - 98px);
+ position: relative;
+ display: flex;
+  
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
+    right: inherit;
+    left: 60px;
+    position: absolute;
+    width: 203px;
+    flex-basis: 203px;
+    color: white;
+
+}
+.swiper-wrapper {
+    flex-basis: 500px;
+    
+    position: inherit;
+}
+.swiper-slide{
+    color: white;
+    position:inherit
+}
+.swiper-pagination-bullet-active {
+    background: transparent;
+}
+.swiper-pagination-bullet {
+    background: transparent;
+    width: inherit;
+    text-align: left;
+    height: inherit
+}
+.swiper-pagination-bullet span {
+    display: block;
+}
+.swiper-footer {
+    position: absolute;
+    background: #ff0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+
 }

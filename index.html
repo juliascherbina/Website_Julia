@@ -35,32 +35,40 @@
             </nav>
         </header>
         <main class="content-main">
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">
+                        <div class="swiper-body">
+                            Slide 1
+                        </div>
+                        
+                        <div class="swiper-footer">text</div>
+                    </div>
                     <div class="swiper-slide">Slide 2</div>
                     <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination"> </div>
             </div>
         </main>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-          direction: "vertical",
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
+        let count = ['1', '2', '3']
+        let art = ['Julius Caesar', 'Into the Abyss', 'Discobolous']
+        let price = ['157 ETH', '56 ETH', '143 ETH ']
+        let swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return ('<p class="' + className + '">' + ('#0'+(count[index]))+'<span>'+(art[index])+'</span>'+
+                         '<span>'+(price[index])+'</span>' + "</p>")
+                },
+            },
         });
-      </script>
+    </script>
 </body>
 
 </html>

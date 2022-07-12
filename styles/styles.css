@@ -163,7 +163,41 @@ html {
     height: calc(100vh - 98px);
     position: relative;
     display: flex;
-
+}
+.swiper-body {
+    margin-left: 50%;
+}
+.swiper-body__title {
+     font-family: 'Caudex', serif;
+     font-weight: 700;
+     font-size: 45.4px;
+}
+.swiper-body__title span {
+position: relative;
+} 
+.swiper-body__title span::before,
+.swiper-body__title span::after {
+    content: '3D printed';
+    position:absolute;
+    width: 100% ;
+    z-index: -1;
+    
+}
+.swiper-body__title span::before {
+    top: -0px;
+    left: -2px;
+    color: #fb258b;
+    
+}
+.swiper-body__title span::after {
+    bottom: -2px;
+    left: 5px;
+    color:#5025FB
+}
+.swiper-body__desc {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #BCBCBC
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets,
@@ -224,14 +258,61 @@ html {
 }
 .swiper-footer {
     position: absolute;
+    width: 1750px;
+    height: 222.39px;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
     background: linear-gradient(270deg, rgba(66, 66, 66, 0.49) 0%, rgba(66, 66, 66, 0.4753) 76.04%, rgba(66, 66, 66, 0) 100%);
     backdrop-filter: blur(47.2917px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .swiper-body {
     margin-left: 50%;
+}
+.swiper-cover {
+    height:225px;
+    width: 225px;
+    position: relative;
+    overflow: hidden;
+}
+.swiper-cover__img {
+    width: 225px;
+    height: 225px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+.swiper-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto, 1fr;
+    gap: 5%;
+    flex-basis: calc(100% - 360px);
+    padding-left: 60px ;
+}
+.swiper-info-author {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    font-family: 'Caudex', serif;
+    font-size: 22.7px;
+    font-weight: 700;
+}
+.swiper-info-item span{
+ display: block;
+ font-family: 'Catamaran', sans-serif ;
+ font-weight: 500;
+ font-size: 17px;
+ color: #BCBCBC;
+ margin-top: 11px;
+}
+.swiper-info-item {
+ font-family: 'Orbitron', sans-serif;
+ font-weight: 700;
+ font-size: 17px;
 }

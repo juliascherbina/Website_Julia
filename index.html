@@ -39,18 +39,65 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-body">
-                            Slide 1
+                            <h2 class="swiper-body__title">Win <span> 3D printed</span> miniature model</h2>
+                            <p class="swiper-body__desc"> Bid now to avail these models and many other rewards on exclusive pieces.</p>
+                            <a href="#" class=" swiper-body__btn swiper-body__buy"> Buy now</a>
+                            <a href="#" class=" swiper-body__btn  swiper-body__view">View NFT</a>
                         </div>
-                        <div class="swiper-footer">text</div>
+                        <div class="swiper-footer">
+                            <div class="swiper-info">
+                                <p class="swiper-info-author">Maria Roman Generative</p>
+                                <p class="swiper-info-item">Token ID <span> Auxpo #66156</span></p>
+                                <p class="swiper-info-item">Creator<span> Enzo Tribbiani</span></p>
+                                <p class="swiper-info-item">Base price <span> 46 ETH</span></p>
+                                <p class="swiper-info-item">limit<span> 5 per wallet</span></p>
+                                <p class="swiper-info-item">Mint date <span> 5th March 2022</span></p>
+                            </div>
+                            <div class="swiper-cover">
+                                <img class="swiper-cover__img"
+                                    src="./images/Azurowa-dekoracja-scienna-3D-geometryczny-wilk-75-Dlugosc-75-cm.jfif"
+                                    alt="">
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-body">
                             Slide 2
                         </div>
+                        <div class="swiper-footer">
+                            <div class="swiper-info">
+                                <p class="swiper-info-author">Maria Roman Generative</p>
+                                <p class="swiper-info-item">Token ID <span> Auxpo #66156</span></p>
+                                <p class="swiper-info-item">Creator<span> Enzo Tribbiani</span></p>
+                                <p class="swiper-info-item">Base price <span> 46 ETH</span></p>
+                                <p class="swiper-info-item">limit<span> 5 per wallet</span></p>
+                                <p class="swiper-info-item">Mint date <span> 5th March 2022</span></p>
+                            </div>
+                            <div class="swiper-cover">
+                                <img class="swiper-cover__img"
+                                    src="./images/wilk-2-z-cieniem.jpg"
+                                    alt="">
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-body">
                             Slide 3
+                        </div>
+                        <div class="swiper-footer">
+                            <div class="swiper-info">
+                                <p class="swiper-info-author">Maria Roman Generative</p>
+                                <p class="swiper-info-item">Token ID <span> Auxpo #66156</span></p>
+                                <p class="swiper-info-item">Creator<span> Enzo Tribbiani</span></p>
+                                <p class="swiper-info-item">Base price <span> 46 ETH</span></p>
+                                <p class="swiper-info-item">limit<span> 5 per wallet</span></p>
+                                <p class="swiper-info-item">Mint date <span> 5th March 2022</span></p>
+                            </div>
+                            <div class="swiper-cover">
+                                <img class="swiper-cover__img"
+                                    src="./images/graphic.webp"
+                                    alt="">
+                            </div>
                         </div>
                     </div>
 
@@ -66,12 +113,16 @@
         let price = ['157 ETH', '56 ETH', '143 ETH ']
         let swiper = new Swiper(".mySwiper", {
             direction: "vertical",
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
                 renderBullet: function (index, className) {
                     return ('<p class="' + className + '">' + ('#0' + (count[index])) + '<span class="pagination-art">' + (art[index]) + '</span>' +
-                        '<span class="pagination-price">' + '<span>'+ (price[index]) + '</span>' + '</span>' + "</p>")
+                        '<span class="pagination-price">' + '<span>' + (price[index]) + '</span>' + '</span>' + "</p>")
                 },
             },
         });
